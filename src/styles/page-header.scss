@@ -1,0 +1,70 @@
+.page-header {
+	margin: 20px 0 20px 0;
+
+	h1 {
+		margin: 0 0 0 40px;
+		word-break: break-word;
+	}
+
+	.lead {
+		margin: 0 0 0 0;
+	}
+
+	.breadcrumbs {
+		font-size: 1em;
+		margin: 0 0 0 40px;
+		display: block;
+		color: #B2B2B2;
+
+		a {
+			color: #B2B2B2;
+			text-decoration: none;
+	
+			&.link-arrow-back:before {
+				font-family: "glyphs" !important;
+				font-size: 75%;
+				content: "\e006";
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		h1, 
+		.breadcrumbs {
+			margin-left: 0;
+		}
+	}
+
+	.links {
+		a:last-child {
+			margin-left: 5px;
+		}
+	}
+
+	.nav-tabs {
+		margin-top: 30px;
+	}
+
+	.navigation-toggle {
+		font-size: 24px;
+		text-align: center;
+		color: #666;
+		text-decoration: none;
+		display: block;
+		float: left;
+	}
+
+	@media (min-width: 768px) {
+		.navigation-toggle {
+			display: none;
+		}
+	}
+
+	.badge {
+		font-size: 65%;
+		padding: 0.2rem 0.3rem;
+		color: $gray-600;
+	}
+
+}
+

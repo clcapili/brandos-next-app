@@ -1,0 +1,31 @@
+.custom-control-checkbox {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+
+    .custom-control-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &:checked~.custom-control-indicator {
+            background-color: #00B4ED;
+        }
+    }
+
+    .custom-control-indicator {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #00B4ED;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

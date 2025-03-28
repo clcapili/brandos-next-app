@@ -1,0 +1,2207 @@
+{
+	"info": {
+		"_postman_id": "72b6007b-b99c-4b50-8fca-0375bc08af31",
+		"name": "BrandOS Next",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30542712"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/account",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/auth/login?email=dmetri333@gmail.com&password=password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "dmetri333@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "content",
+			"item": [
+				{
+					"name": "Content",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/content",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/content/read?guid=/page-1/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"read"
+							],
+							"query": [
+								{
+									"key": "guid",
+									"value": "/page-1/"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Parents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/content/parents?parentId=3",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"parents"
+							],
+							"query": [
+								{
+									"key": "parentId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"page\",\n    \"body\": { \"content\": 5000 }, \n    \"guid\": \"/page-1/\",\n    \"name\": \"Page 1\",\n    \"parentId\": 0,\n    \"sort\": 0,\n    \"hideNavigation\": true,\n    \"hideHeader\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/create",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"body\": { \"test\": \"edited 6\" },\n    \"guid\": \"\",\n    \"name\": \"\",\n    \"parentId\": 0,\n    \"sort\": 0,\n    \"hideNavigation\": true,\n    \"hideHeader\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/save",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autosave",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"body\": { \"test\": \"autosave 2\" }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/autosave",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"autosave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Discard Working",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/discardWorking",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"discardWorking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/publish",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unpublish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/unpublish",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"unpublish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Use Revision",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"revisionNumber\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/useRevision",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"useRevision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Use Autosave",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/useAutosave",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"useAutosave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/clone",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"clone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trash",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/trash",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"trash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Untrash",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/untrash",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"untrash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/content/delete",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"content",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invites",
+			"item": [
+				{
+					"name": "Invites",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/invites",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"invites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"groups\": []\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/invites/create",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"invites",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/invites/resend",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"invites",
+								"resend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/invites/revoke",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"invites",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "password",
+			"item": [
+				{
+					"name": "Forgot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/password/forgot",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"password",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password1\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/password/reset",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"password",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/profile",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/profile/accounts",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/profile/general/update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"general",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/profile/photo/update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"photo",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/api/profile/photo/remove",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"photo",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPassword1\": \"\",\n    \"newPassword2\": \"\",\n    \"oldPassword\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/profile/password/update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"password",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"\",\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/register",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"\",\n    \"password\": \"\",\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/register/invite",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"register",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"\",\n    \"plan\": \"\",\n    \"promo\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/register/account?company=MBLM&plan&promo",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"register",
+								"account"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "MBLM"
+								},
+								{
+									"key": "plan",
+									"value": null
+								},
+								{
+									"key": "promo",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    filter: null,\n    page: 10\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/users",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/users/read?id",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"read"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"groups\": []\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/user/update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Account-Id",
+								"value": "{{Account-Id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/user/remove",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "security",
+			"item": [
+				{
+					"name": "groups",
+					"item": [
+						{
+							"name": "Groups",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/security/groups",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/groups/read?id=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"groups",
+										"read"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/groups/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"groups",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0,\n    \"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/groups/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"groups",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/groups/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"groups",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "containers",
+					"item": [
+						{
+							"name": "Containers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/security/containers",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/containers/read?id=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers",
+										"read"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\",\n    \"key\": \"\",\n    \"permissions\": []\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/containers/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"key\": \"\",\n    \"permissions\": []\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/containers/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sort",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"id\": 0,\n        \"sort\": 1\n    },\n    {\n        \"id\": 0,\n        \"sort\": 2\n    },\n    {\n        \"id\": 0,\n        \"sort\": 3\n    }\n]"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/containers/sort",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers",
+										"sort"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/containers/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"containers",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "access",
+					"item": [
+						{
+							"name": "Access",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/security/access",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Access",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"permissions\": \"container|1|1\",\n    \"set\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/security/access/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"security",
+										"access",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "settings",
+			"item": [
+				{
+					"name": "General",
+					"item": [
+						{
+							"name": "Settings",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/settings",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\",\n    \"defaultPage\": \"\",\n    \"favicon\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "domains",
+					"item": [
+						{
+							"name": "Domains",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/domains",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"domains"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"domain\": \"\",\n    \"ssl\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/domains/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"domains",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Primary",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/domains/primary",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"domains",
+										"primary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/domains/verify",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"domains",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/domains/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"domains",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "menus",
+					"item": [
+						{
+							"name": "Menus",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/settings/menus",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"menus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/menus/read?id=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"menus",
+										"read"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/menus/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"menus",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"data\": []\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/menus/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"menus",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/menus/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"menus",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "components",
+					"item": [
+						{
+							"name": "Components",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/settings/components",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"components"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/components/read?id=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"components",
+										"read"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\"\n    \"code\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/components/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"components",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0,\n    \"name\": \"\"\n    \"code\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/components/update",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"components",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/components/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"components",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "patterns",
+					"item": [
+						{
+							"name": "Patterns",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/settings/patterns",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"patterns"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/patterns/read?id=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"patterns",
+										"read"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\"\n    \"data\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/patterns/create",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"patterns",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Account-Id",
+										"value": "{{Account-Id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/settings/patterns/delete",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"settings",
+										"patterns",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

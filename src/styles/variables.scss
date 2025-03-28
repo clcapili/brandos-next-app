@@ -1,0 +1,166 @@
+// color system
+$white:    #fff;
+$gray-100: #fafafd;
+$gray-200: #efeff1;
+$gray-300: #cfd6e4;
+$gray-400: #a6b0c3;
+$gray-500: #808a9d;
+$gray-600: #58667e;
+$gray-700: #444444;
+$gray-800: #333333;
+$gray-900: #111111;
+$black:    #000;
+
+$grays: (
+  "white": $white,
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+  "black": $black
+);
+
+$blue:    #00B4ED;
+$indigo:  #9F69FF;
+$purple:  #DDC7FB; 
+$pink:    #EC008C;
+$red:     #ED1C24;
+$orange:  #F26522;
+$yellow:  #FFF200;
+$green:   #39B54A;
+$teal:    #7CF7C7;
+$cyan:    #BFEEF9;
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// borders
+$border-radius:               .2rem;
+$border-radius-sm:            .05rem;
+$border-radius-lg:            .4rem;
+
+// body
+$body-bg:                     $gray-200;
+
+// typography
+$font-size-base:              1rem;
+$font-weight-bold:            600;
+$font-weight-bolder:          600;
+
+$font-family-sans-serif:      "Source Sans Pro", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// $link-color:                  $primary;
+$link-decoration:             none;
+$link-hover-decoration:       underline;
+
+$small-font-size:             0.875rem;
+
+$headings-font-weight:        300;
+
+$h1-font-size:                $font-size-base * 2;
+$h2-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-base;
+
+$dt-font-weight:              600;
+
+// breadcrumbs
+$breadcrumb-bg:               transparent;
+
+// close
+$close-font-weight:            300;
+$close-text-shadow:            none;
+
+// components
+// forms
+$input-group-addon-bg:        $white;
+
+// buttons
+$btn-color:                   $white;
+
+// modals
+$modal-header-border-color:   $gray-200;
+
+// pagination
+$pagination-border-color:           $gray-400;
+$pagination-hover-border-color:     $pagination-border-color;     
+$pagination-hover-bg:               $gray-100;
+$pagination-hover-color:            $primary;
+$pagination-disabled-border-color:  $pagination-border-color;
+
+// badges
+$badge-font-size:                   .875em;
+$badge-padding-y:                   .4em;
+$badge-padding-x:                   .7em;
+
+// progress bars
+$progress-bg:                       $gray-100;
+
+// card
+$card-bg:  $white;
+$card-border-radius:      0.4rem;
+$card-border-width:       0;
+
+// popovers
+$popover-border-color:        $gray-400;
+
+// Tooltips
+$tooltip-bg:                  $gray-800;
+
+// bread crumbs
+$breadcrumb-padding-y:        0;
+$breadcrumb-padding-x:        0;
+
+// list group
+$list-group-bg:                     $white;
+
+// tables
+$table-cell-padding-y:        .85rem;
+$table-cell-padding-x:        .85rem;
+
+$table-striped-bg:            #f9f9f9;
+
+// alerts
+$alert-padding-y:              0.5rem;
+$alert-padding-x:              1rem;

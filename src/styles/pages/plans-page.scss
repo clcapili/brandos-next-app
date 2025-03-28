@@ -1,0 +1,17 @@
+.plans-page { 
+    margin: 50px 0;
+
+    .free-item {
+        padding-left: .75rem;
+        border-left: 2px solid #999;
+
+        .card {
+            .card-header {
+                background-color: $white !important;
+                color: $black !important;
+                border-bottom: 1px solid $black;
+            }
+        }
+    }
+
+}

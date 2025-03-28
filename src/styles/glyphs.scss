@@ -1,0 +1,333 @@
+@font-face {
+  font-family: 'glyphs';
+  src:
+    url('../fonts/glyphs.ttf?ekhya') format('truetype'),
+    url('../fonts/glyphs.woff?ekhya') format('woff'),
+    url('../fonts/glyphs.svg?ekhya#glyphs') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="glyph-"], [class*=" glyph-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'glyphs' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.glyph-file-copy:before {
+  content: "\e94d";
+}
+.glyph-bar-chart:before {
+  content: "\e94e";
+}
+.glyph-people-alt:before {
+  content: "\e94f";
+}
+.glyph-menu-book:before {
+  content: "\e950";
+}
+.glyph-shrink:before {
+  content: "\e939";
+}
+.glyph-grow:before {
+  content: "\e93a";
+}
+.glyph-timer:before {
+  content: "\e951";
+}
+.glyph-clipboard:before {
+  content: "\e93b";
+}
+.glyph-undo:before {
+  content: "\e93c";
+}
+.glyph-redo:before {
+  content: "\e93d";
+}
+.glyph-blocks:before {
+  content: "\e93e";
+}
+.glyph-layers:before {
+  content: "\e93f";
+}
+.glyph-section:before {
+  content: "\e940";
+}
+.glyph-bars:before {
+  content: "\e941";
+}
+.glyph-box:before {
+  content: "\e942";
+}
+.glyph-cube-alt:before {
+  content: "\e943";
+}
+.glyph-aspect-ratio:before {
+  content: "\e944";
+}
+.glyph-pic-in-pic:before {
+  content: "\e945";
+}
+.glyph-home:before {
+  content: "\e92c";
+}
+.glyph-lock:before {
+  content: "\e922";
+}
+.glyph-lock-open:before {
+  content: "\e923";
+}
+.glyph-device-desktop:before {
+  content: "\e924";
+}
+.glyph-device-laptop:before {
+  content: "\e925";
+}
+.glyph-device-tablet:before {
+  content: "\e926";
+}
+.glyph-device-smartphone:before {
+  content: "\e928";
+}
+.glyph-device-smartphone-sm:before {
+  content: "\e927";
+}
+.glyph-print:before {
+  content: "\e91d";
+}
+.glyph-apps:before {
+  content: "\e902";
+}
+.glyph-photo:before {
+  content: "\e914";
+}
+.glyph-menu:before {
+  content: "\e901";
+}
+.glyph-more-horiz:before {
+  content: "\e90e";
+}
+.glyph-more-vert:before {
+  content: "\e90f";
+}
+.glyph-filter:before {
+  content: "\e907";
+}
+.glyph-move:before {
+  content: "\e908";
+}
+.glyph-dot:before {
+  content: "\e628";
+}
+.glyph-plus-circle:before {
+  content: "\e946";
+}
+.glyph-minus-circle:before {
+  content: "\e929";
+}
+.glyph-plus:before {
+  content: "\e020";
+}
+.glyph-minus:before {
+  content: "\e021";
+}
+.glyph-check:before {
+  content: "\e912";
+}
+.glyph-check-circle:before {
+  content: "\e913";
+}
+.glyph-close:before {
+  content: "\e01f";
+}
+.glyph-face:before {
+  content: "\e900";
+}
+.glyph-new-releases:before {
+  content: "\e90d";
+}
+.glyph-mail:before {
+  content: "\e00a";
+}
+.glyph-calendar:before {
+  content: "\e953";
+}
+.glyph-trash:before {
+  content: "\e90a";
+}
+.glyph-attach-file:before {
+  content: "\e909";
+}
+.glyph-upload-file:before {
+  content: "\e90b";
+}
+.glyph-upload-cloud:before {
+  content: "\e90c";
+}
+.glyph-upload-cloud-outline:before {
+  content: "\e92d";
+}
+.glyph-download-file:before {
+  content: "\e910";
+}
+.glyph-download-cloud:before {
+  content: "\e911";
+}
+.glyph-move-up:before {
+  content: "\e92e";
+}
+.glyph-move-down:before {
+  content: "\e92f";
+}
+.glyph-move-left:before {
+  content: "\e930";
+}
+.glyph-move-right:before {
+  content: "\e931";
+}
+.glyph-chevron-up:before {
+  content: "\e004";
+}
+.glyph-chevron-down:before {
+  content: "\e005";
+}
+.glyph-chevron-left:before {
+  content: "\e006";
+}
+.glyph-chevron-right:before {
+  content: "\e007";
+}
+.glyph-circle-up:before {
+  content: "\e903";
+}
+.glyph-circle-down:before {
+  content: "\e905";
+}
+.glyph-circle-left:before {
+  content: "\e906";
+}
+.glyph-circle-right:before {
+  content: "\e904";
+}
+.glyph-caret-up:before {
+  content: "\e016";
+}
+.glyph-caret-down:before {
+  content: "\e017";
+}
+.glyph-caret-left:before {
+  content: "\e018";
+}
+.glyph-caret-right:before {
+  content: "\e019";
+}
+.glyph-grow-height:before {
+  content: "\e932";
+}
+.glyph-grow-width:before {
+  content: "\e933";
+}
+.glyph-linkedin:before {
+  content: "\e60a";
+}
+.glyph-facebook:before {
+  content: "\e608";
+}
+.glyph-youtube:before {
+  content: "\ea99";
+}
+.glyph-twitter:before {
+  content: "\e606";
+}
+.glyph-play:before {
+  content: "\e917";
+}
+.glyph-stop:before {
+  content: "\e915";
+}
+.glyph-pause:before {
+  content: "\e916";
+}
+.glyph-phone:before {
+  content: "\e91c";
+}
+.glyph-location:before {
+  content: "\e91a";
+}
+.glyph-wifi:before {
+  content: "\e91b";
+}
+.glyph-edit-line:before {
+  content: "\e918";
+}
+.glyph-edit:before {
+  content: "\e919";
+}
+.glyph-new-folder:before {
+  content: "\e934";
+}
+.glyph-visibility:before {
+  content: "\e91e";
+}
+.glyph-copy:before {
+  content: "\e92a";
+}
+.glyph-settings:before {
+  content: "\e92b";
+}
+.glyph-thumb:before {
+  content: "\e91f";
+}
+.glyph-notes:before {
+  content: "\e920";
+}
+.glyph-view-day:before {
+  content: "\e921";
+}
+.glyph-view-list:before {
+  content: "\e935";
+}
+.glyph-view-thumb:before {
+  content: "\e936";
+}
+.glyph-rotate-left:before {
+  content: "\e937";
+}
+.glyph-rotate-right:before {
+  content: "\e938";
+}
+.glyph-align-left:before {
+  content: "\e947";
+}
+.glyph-align-center:before {
+  content: "\e948";
+}
+.glyph-align-right:before {
+  content: "\e949";
+}
+.glyph-align-top:before {
+  content: "\e94a";
+}
+.glyph-align-middle:before {
+  content: "\e94b";
+}
+.glyph-align-bottom:before {
+  content: "\e94c";
+}
+.glyph-search:before {
+  content: "\e952";
+}
+.glyph-pacman:before {
+  content: "\e602";
+}

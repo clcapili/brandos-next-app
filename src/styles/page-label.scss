@@ -1,0 +1,14 @@
+
+.page-label {
+    color: $gray-400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    a {
+        color: $gray-800;
+        font-size: .85rem;
+        cursor: pointer;
+        outline: none;
+    }
+}

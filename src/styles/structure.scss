@@ -1,0 +1,68 @@
+form {
+    margin-bottom: 0;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    transition: left 0.25s ease-out;
+}
+
+.main .main-content {
+    position: relative;
+    margin-left: 0;
+    transition: margin-left 0.25s ease-out;
+}
+
+body.navigation-open {
+    overflow-x: hidden;
+}
+
+body.navigation-open .main {
+    left: 250px;
+    transition: left .25s ease-out;
+}
+
+body.navigation-open .main .navigation {
+    left: 0;
+    transition: left .25s ease-out;
+}
+
+@media (min-width: 768px) {
+    body.navigation-open {
+        overflow-x: auto;
+    }
+
+    body.navigation-open .main {
+        left: 0;
+    }
+
+    .main .main-content {
+        margin-left: 250px;
+        transition: margin-left .25s ease-out;
+    }
+
+    .main .navigation {
+        left: 0;
+        transition: left .25s ease-out;
+    }
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.drag-handle {
+    cursor: move;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.ghost {
+    border: 1px dashed $gray-600;
+    border-top-width: 1px !important;
+    background-color: aliceblue;
+}

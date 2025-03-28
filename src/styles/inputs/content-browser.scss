@@ -1,0 +1,152 @@
+/*============== Content Browser ============*/
+
+.content-browser-open {
+    overflow: hidden;
+}
+
+.content-browser { 
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1600;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    &.open {
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: block;
+    }
+
+    .content-browser-dialog {
+        position: relative;
+        width: auto;
+        max-width: 850px;
+        margin: 1.75rem auto;
+        left: auto;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 6000;
+    }
+
+    .content-browser-content {
+        overflow: hidden;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        outline: 0;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    }
+
+    .content-browser-body {
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content-browser-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #ddd;
+        height: 65px;
+
+        button {
+            margin-left: 10px;
+        }
+    }
+
+    .content-browser-window {
+        overflow-x: scroll;
+        border: 1px solid #999;
+        position: relative;
+        background: #fff;
+
+        .browser {
+            height: 200px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    
+        .browser li.column {
+            width: 189px;
+            height: 100%;
+            float: left;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border-right: 1px solid #999;
+        }
+    
+        .browser li.column li {
+            zoom: 1;
+            padding: 2px 3px;
+            display: block;
+            cursor: pointer;
+        }
+    
+        .browser li.column li.selected, 
+        .browser li.column li.selected:hover {
+            background: #d8eff6;
+        }
+    
+        .browser li.column li.selected .file-icon::before, 
+        .browser li.column li.selected:hover .file-icon::before { 
+            border-color: #d8eff6 #d8eff6 rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.35);
+        }
+    
+        .browser li.column li:hover {
+            background: #eee;
+        }
+    
+        .browser li.column li:hover .file-icon::before {
+            border-color: #eee #eee rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.35);
+        }
+    
+        .browser li.column li i {
+            margin-top: 2px;
+            float: left;
+            width: 13px;
+            height: 16px;
+        }
+    
+        .browser li.column a {
+            color: #111;
+            text-decoration: none;
+            display: block;
+            word-break: break-word;
+            margin-left: 17px;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    
+        .browser li.column ul {
+            padding: 0 0 15px 0;
+            list-style-type: none;
+        }
+    
+        .browser li.column li i.file-icon[data-type=folder] {
+            display: inline-block;
+            position: relative;
+        }
+    
+        .browser li.column li i.file-icon[data-type=folder]::before,
+        .browser li.column li i.file-icon[data-type=folder]::after {
+            content: initial;
+        }
+    }
+}

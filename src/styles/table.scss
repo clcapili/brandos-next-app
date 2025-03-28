@@ -1,0 +1,81 @@
+.table
+.table th,
+.table td {
+	padding: .85rem;
+	line-height: 1.5;
+	vertical-align: top;
+	border-top: 1px solid #eceeef;
+}
+
+.table thead th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #eceeef;
+	border-top: none;
+	color: #9E9E9E;
+	font-weight: 600;
+}
+
+.table thead th a {
+	color: #9E9E9E;
+	text-decoration: none;
+}
+
+.table tbody + tbody {
+	border-top: 2px solid #eceeef;
+}
+
+.table .table {
+	background-color: #fff;
+}
+
+
+
+/* content */
+.table tr td  {
+	.row-control {
+		width: 16px;
+		display: inline-block;
+		margin-right: 10px;
+
+		.drag-handle {
+			cursor: move;
+		}
+	}	
+}
+
+.table tr td .title { 
+	font-weight: bold;
+	color: #333;
+}
+
+.table tr td .row-actions {
+	color: #AAA;
+	font-size: .875rem;
+}
+
+.table tr:hover td .row-actions {
+	visibility: visible;
+}
+
+@media (min-width:1200px) { 
+	.table tr td .row-actions {
+		visibility: hidden;
+	}
+}
+
+.table .action-link {
+    color: #666;
+    text-decoration: none;
+}
+
+.table .with-image img {
+	float: left;
+	margin-right: 15px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.table .options {
+	color: $body-color;
+	text-decoration: none;
+}

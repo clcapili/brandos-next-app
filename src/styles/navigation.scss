@@ -1,0 +1,157 @@
+
+/* navigation system */
+
+.navigation {
+    width: 250px;
+    height: 100%;
+    z-index: 10;
+    bottom: 0;
+    top: 0;
+    left: -250px;
+    position: fixed;
+    transition: all .2s ease-out;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -3px 0px 10px #00000033;
+
+    .profile-link {
+        padding: 20px 20px;
+        text-decoration: none; 
+        display: block; 
+        color: #3e4056;
+        cursor: pointer;
+        line-height: 24px;
+
+        img { 
+            border-radius: 50%; 
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .glyph-chevron-right {
+            float: right;
+            margin: 3px 0;
+            line-height: 24px;
+            height: 24px;
+            display: block;
+        }
+    }
+
+    .user-session { 
+        display: none; 
+        position: absolute; 
+        z-index: 999; 
+        left: 265px; 
+        bottom: 10px; 
+        background: #FFF; 
+        color: #666; 
+        width: 320px; 
+        box-shadow: 0 2px 8px rgba(0,0,0,.4);
+        border-radius: 0.5rem;
+
+        &.open {
+            display: block;
+        }
+
+        .profile { 
+            overflow: hidden; 
+            padding: 20px; 
+            
+            .photo { 
+                float: left;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+
+            .details { margin: 0 0 0 65px; color: #666; }
+            .details strong { color: #000; }
+        }
+
+        .options { 
+            padding: 10px 20px; 
+            overflow: hidden;
+
+            a {
+                display: block;
+                padding: 8px 0;
+                color: #666; 
+                cursor: pointer;
+                position: relative;
+
+                .glyph { z-index: 12; position: absolute; top: 15px; right: 10px; margin: 0; color: #999; font-size: 14px; }
+            }
+
+            .accounts {
+                display: none;
+                padding: 10px 0;
+
+                &.open {
+                    display: block;
+                }
+                
+                a {
+                    padding: 5px 5px 5px 15px;
+                    color: #000;
+                }
+               
+            }
+
+        }
+    }
+
+    .left-side-nav {
+        padding: 0;
+        margin: 0;
+        flex-grow: 1
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        .side-nav-item {
+            list-style-type: none;
+
+            .side-nav-link {
+                display: block;
+                padding: 12px 20px;
+                font-size: 0.9375rem;
+                position: relative;
+                transition: all 0.4s;
+                color: #858585;
+                text-decoration: none;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                span {
+                    vertical-align: middle;
+                }
+        
+                i {
+                    padding-right: 14px;
+                    vertical-align: middle;
+                    font-size: 18px;
+                }
+
+                &.side-nav-link-sub {
+                    padding: 5px 20px;
+                }
+        
+            }
+
+        }
+    }
+}

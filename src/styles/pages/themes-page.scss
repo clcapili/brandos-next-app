@@ -1,0 +1,40 @@
+.theme-options {
+    .col-fixed {
+        flex: 0 0 auto;
+        width: 100px;
+    }
+
+    .inline-array-item {
+        display: inline-block;
+        margin-right: 5px;
+
+        &::after {
+            content: ',';
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    ul {
+        margin-bottom: 0;
+        list-style-type: none;
+    }
+
+    .colorbox {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $gray-300;
+    }
+
+    .iconbox {
+        width: 24px;
+        height: 24px;
+    }
+}

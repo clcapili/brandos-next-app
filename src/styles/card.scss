@@ -1,0 +1,77 @@
+a.card {
+    color: $gray-800;
+    text-decoration: none;
+}
+
+.card {
+    box-shadow: 0 5px 20px rgb(0 0 0 / 2%);
+}
+
+.card-borderless {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    
+    .card-body {
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+.card-profiles {
+    
+    .card-list {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .card-list-item {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        color: $gray-800;
+        text-decoration: none;
+        padding: .5rem .5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .details {
+            display: flex;
+            align-items: center;
+    
+            img {
+                border-radius: 50%;
+                margin-right: 10px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    
+        .placement {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+
+.card-table + .card-body,
+.table-responsive + .card-body {
+    border-top: 1px solid #dee2e6
+}
+
+.card-table {
+    margin-bottom: 0;
+    
+    td:first-child:not(.not-first-cell),
+    th:first-child:not(.not-first-cell) {
+        padding-left: 1.25rem;
+    }
+
+    td:last-child:not(.not-last-cell),
+    th:last-child:not(.not-last-cell) {
+        padding-right: 1.25rem;
+    }
+}

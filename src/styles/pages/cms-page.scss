@@ -1,0 +1,116 @@
+.cms-page {
+    
+    .list-table {
+        .file-icon[data-type=folder] {
+            width: 48px;
+        }
+
+        .btn-bulk {
+            --bs-btn-padding-y: 0.25rem;
+            --bs-btn-padding-x: 0.5rem;
+            --bs-btn-font-size: 0.875rem;
+            --bs-btn-border-radius: 0.15rem;
+        }
+    }
+
+    .content-details {
+        background-color: $white;
+        padding: 1rem;
+        margin-bottom: 40px;
+
+        h5 {
+            border-bottom: 1px solid #212529;
+            padding-bottom: 5px;
+        }
+
+        .thumbnail {
+            .file-icon::before {
+                border-top-color: #FFFFFF;
+                border-right-color: #FFFFFF;
+            }
+
+            img {
+
+            }
+        }
+
+        .detail-panel {
+            padding: 10px 0;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.open .detail-panel-body {
+                display: block;
+            }
+
+            .detail-panel-title {
+                margin: 0px;
+                cursor: pointer;
+
+                a {
+                    color: #666;
+                    display: block;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #00B4ED;
+                    }
+                }
+            }
+
+            .detail-panel-body {
+                margin-top: 10px;
+                display: none;
+
+                dl {
+                    margin-bottom: 0;
+                }
+                dt {
+                    text-transform: capitalize;
+                }
+
+                dd {
+                    word-wrap: break-word;
+                }
+
+                [data-action=clipboard-copy] {
+                    text-decoration: none;
+                    color: #666;
+                }
+
+                .node-thumb img {
+                    max-height: 128px;
+                }
+            }
+           
+        }
+
+    }
+
+    .template-list {
+        margin-bottom: 1rem;
+        
+        input[type=radio] {
+            margin: 0;
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: none;
+
+            &:checked+img {  
+                outline: 2px solid $gray-700;
+                border-radius: .2rem;
+            }
+        }
+
+        img {
+            padding: 3px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.account-page { 
+    margin: 50px 0;
+
+   .list-group {
+        a {
+            color: $gray-800;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        .photo {
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .name {
+
+        }
+
+        .glyph-chevron-right {
+            margin-left: auto;
+        }
+   }
+
+}

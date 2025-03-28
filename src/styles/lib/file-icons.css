@@ -1,0 +1,246 @@
+/*!
+File icons
+
+*/
+.file-icon {
+  font-family: Arial, Tahoma, sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  width: 36px;
+  height: 48px;
+  background: #00aeef;
+  position: relative;
+  border-radius: 2px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+
+.file-icon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom-left-radius: 2px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff #fff rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.35);
+}
+
+.file-icon::after {
+  display: block;
+  content: attr(data-type);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  color: #fff;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* fileicons.sizes */
+.file-icon-xs {
+  width: 12px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.file-icon-xs::before {
+  border-bottom-left-radius: 1px;
+  border-width: 3px;
+}
+
+.file-icon-xs::after {
+  content: "";
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+  width: auto;
+  left: 2px;
+  right: 2px;
+  bottom: 3px;
+  font-size: 7px;
+}
+
+.file-icon-sm {
+  width: 18px;
+  height: 24px;
+  border-radius: 2px;
+}
+
+.file-icon-sm::before {
+  border-bottom-left-radius: 2px;
+  border-width: 4px;
+}
+
+.file-icon-sm::after {
+  font-size: 7px;
+  padding: 2px;
+}
+
+.file-icon-lg {
+  width: 48px;
+  height: 64px;
+  border-radius: 3px;
+}
+
+.file-icon-lg::before {
+  border-bottom-left-radius: 2px;
+  border-width: 8px;
+}
+
+.file-icon-lg::after {
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+.file-icon-xl {
+  width: 72px;
+  height: 96px;
+  border-radius: 4px;
+}
+
+.file-icon-xl::before {
+  border-bottom-left-radius: 4px;
+  border-width: 16px;
+}
+
+.file-icon-xl::after {
+  font-size: 19px;
+  padding: 3px 5px;
+}
+
+.file-icon-xxl {
+  width: 96px;
+  height: 128px;
+  border-radius: 4px;
+}
+
+.file-icon-xxl::before {
+  border-bottom-left-radius: 4px;
+  border-width: 16px;
+}
+
+.file-icon-xxl::after {
+  font-size: 24px;
+  padding: 4px 10px;
+}
+
+/* fileicon.types */
+.file-icon[data-type=zip],
+.file-icon[data-type=rar] {
+  background: #acacac;
+}
+
+.file-icon[data-type^=doc],
+.file-icon[data-type^=dot] {
+  background: #307cf1;
+}
+
+.file-icon[data-type^=xls],
+.file-icon[data-type^=csv] {
+  background: #0f9d58;
+}
+
+.file-icon[data-type^=ppt],
+.file-icon[data-type^=pot] {
+  background: #d24726;
+}
+
+.file-icon[data-type=pdf] {
+  background: #e13d34;
+}
+
+.file-icon[data-type=txt] {
+  background: #5eb533;
+}
+
+.file-icon[data-type=mp3],
+.file-icon[data-type=wma],
+.file-icon[data-type=m4a],
+.file-icon[data-type=flac] {
+  background: #8e44ad;
+}
+
+.file-icon[data-type=mpeg],
+.file-icon[data-type=mov],
+.file-icon[data-type=m4v],
+.file-icon[data-type=mp4],
+.file-icon[data-type=wmv],
+.file-icon[data-type=webm],
+.file-icon[data-type=ogg],
+.file-icon[data-type=avi],
+.file-icon[data-type=mkv] {
+  background: #7a3ce7;
+}
+
+.file-icon[data-type=jpg],
+.file-icon[data-type=jpeg],
+.file-icon[data-type=png],
+.file-icon[data-type=gif],
+.file-icon[data-type=ico],
+.file-icon[data-type=tif],
+.file-icon[data-type=tiff],
+.file-icon[data-type=bmp],
+.file-icon[data-type=webp],
+.file-icon[data-type=svg] {
+  background: #f4b400;
+}
+
+.file-icon[data-type=ps],
+.file-icon[data-type=psd],
+.file-icon[data-type=ase] {
+  background: #58C9F8;
+}
+
+.file-icon[data-type=ai],
+.file-icon[data-type=eps] {
+  background: #E9751D;
+}
+
+.file-icon[data-type=aep] {
+  background: #CA98FB;
+}
+
+.file-icon[data-type=sketch] {
+  background: #fa6400;
+}
+
+.file-icon[data-type=indd],
+.file-icon[data-type=indl],
+.file-icon[data-type=indb] {
+  background: #EE5597;
+}
+
+.file-icon[data-type=page] {
+  background: #5eb533;
+}
+
+.file-icon[data-type=anchor] {
+  background: #cccccc;
+}
+
+.file-icon[data-type=html] {
+  background: #333333;
+}
+
+/* folder */
+.file-icon[data-type=folder] {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 120 87' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Efolder_solid%3C/title%3E%3Cg id='Assets' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Assets-/-Assets-App-/-00-Generic-/-00_AA_Generic_folder_blue' transform='translate(-40.000000, -30.000000)' fill='%2300ADEF'%3E%3Cpath d='M40,35.2393612 C40,32.3457419 42.3457419,30 45.2393612,30 L72.8733006,30 C74.5644306,30 76.1515764,30.8162701 77.1352159,32.1919059 L82.9545455,40.330332 L154.760639,40.330332 C157.654258,40.330332 160,42.6760739 160,45.5696932 L160,111.760639 C160,114.654258 157.654258,117 154.760639,117 L45.2393612,117 C42.3457419,117 40,114.654258 40,111.760639 L40,35.2393612 Z' id='folder_solid'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.file-icon[data-type=folder]::before {
+  content: none;
+}
+
+.file-icon[data-type=folder]::after {
+  content: none;
+}
